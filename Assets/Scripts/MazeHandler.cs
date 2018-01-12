@@ -1,7 +1,7 @@
 ﻿/*
  *	Author: Bryce Monaco
  *
- *	Description:
+ *	Description: This script handles generating the maze at runtime
  *
  */
 

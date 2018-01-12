@@ -1,7 +1,7 @@
 ﻿/*
  *	Author: Bryce Monaco
  *
- *	Description:
+ *	Description: This script handles the starting behavior of each tile at runtime
  *
  */
 

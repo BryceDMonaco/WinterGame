@@ -1,7 +1,7 @@
 ﻿/*
  *	Author: Bryce Monaco
  *
- *	Description:
+ *	Description: This script acts as a node for Depth First Search (PathFinding.cs:DoesAnyPathExist)
  *
  */
 

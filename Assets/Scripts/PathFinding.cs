@@ -2,6 +2,7 @@
  *	Author: Bryce Monaco
  *
  *	Description: This script adapted from https://gist.github.com/hermesespinola/15cf66af8edf059df9f38c6c879db0cb
+ *				 DoesAnyPathExist is a Depth First Search function adapted for this game
  *
  */
 
