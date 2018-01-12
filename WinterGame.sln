@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinterGame", "Assembly-CSharp.csproj", "{D1800BB4-C760-9125-B657-3B591839070B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinterGame", "Assembly-CSharp-Editor.csproj", "{99E9855E-2D55-5311-50D1-E2FD9CA08C88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1800BB4-C760-9125-B657-3B591839070B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1800BB4-C760-9125-B657-3B591839070B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1800BB4-C760-9125-B657-3B591839070B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1800BB4-C760-9125-B657-3B591839070B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E9855E-2D55-5311-50D1-E2FD9CA08C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E9855E-2D55-5311-50D1-E2FD9CA08C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E9855E-2D55-5311-50D1-E2FD9CA08C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E9855E-2D55-5311-50D1-E2FD9CA08C88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
