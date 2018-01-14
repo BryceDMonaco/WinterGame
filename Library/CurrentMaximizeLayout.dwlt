@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 909, y: 421}
   m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
-  controlID: 3734
+  controlID: 7118
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 3644
+  controlID: 7074
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,14 +180,14 @@ MonoBehaviour:
     height: 343
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1457.38760304451
+  lastFramingTime: 2755.069000005722
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.75, y: 0.53, z: -10}
+    m_Target: {x: -10, y: 0.53, z: 18.75}
     speed: 2
-    m_Value: {x: 18.75, y: 0.53, z: -10}
+    m_Value: {x: -10, y: 0.53, z: 18.75}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -211,13 +211,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.03753283, y: -0.92327535, z: 0.093381, w: 0.37078434}
+    m_Target: {x: 0.14230973, y: -0.19987933, z: 0.029314268, w: 0.9690155}
     speed: 2
-    m_Value: {x: -0.037531942, y: 0.92325354, z: -0.0933788, w: -0.37077558}
+    m_Value: {x: -0.14230973, y: 0.19987932, z: -0.029314268, w: -0.9690154}
   m_Size:
-    m_Target: 2.2336302
+    m_Target: 59.365063
     speed: 2
-    m_Value: 2.2336302
+    m_Value: 59.365063
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -308,9 +308,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: dc60ffff1c6affffd291ffff9cfbffff0000000070320000
+    m_SelectedIDs: 9c310000
+    m_LastClickedID: 12700
+    m_ExpandedIDs: 5078feffdc60ffff1c6affffd291ffff9cfbffff0000000074300000b830000070320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -397,18 +397,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Tiles
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Tiles
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/Bryce/Documents/Unity Projects/WinterGame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2e0000
-    m_LastClickedID: 11786
+    m_SelectedIDs: 3e2d0000
+    m_LastClickedID: 11582
     m_ExpandedIDs: 000000002c2a0000d02b0000482d0000722d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -462,8 +462,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0e300000
-    m_LastClickedInstanceID: 12302
+    m_SelectedInstanceIDs: 9c310000
+    m_LastClickedInstanceID: 12700
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000302e0000
     m_RenameOverlay:
@@ -489,7 +489,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 462.00684}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 111
 --- !u!114 &11
@@ -510,8 +510,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 705
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -544,7 +544,7 @@ MonoBehaviour:
     width: 275
     height: 684
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 34.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 149

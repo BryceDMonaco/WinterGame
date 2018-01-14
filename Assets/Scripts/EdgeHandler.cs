@@ -2,6 +2,8 @@
  *	Author: Bryce Monaco
  *
  *	Description:
+ *	
+ *	TODO: Occasionly the spare and the first tile will stay on eachother and create a gap
  *
  */
 
@@ -63,6 +65,8 @@ public class EdgeHandler : MonoBehaviour
 
 	public void ShiftTiles () //Move tiles in the direction equivalent to the edge's local +Y axis
 	{
+		Debug.Log ("Start.");
+
 		RaycastHit[] hitNodes;
 
 		hitNodes = Physics.RaycastAll (transform.position, transform.up, 50f, LayerMask.GetMask ("MazeNode"));
@@ -96,9 +100,18 @@ public class EdgeHandler : MonoBehaviour
 
 		spareTileTypeTemp = TileTypes.Nonstatic; //Equivalent to empty var
 		Vector3 sparePosition = mazeHandler.spareHolder.transform.position;
+		Vector3 startPostion = hitNodes [0].transform.parent.position;
 
 		for (int i = 0; i < hitNodes.Length; i++)
 		{
+			if (i == 0)
+			{
+				mazeHandler.spareTileNode.transform.parent.position = startPostion; //Move the spare to the first spot
+
+			}
+
+			hitNodes [i].transform.parent.position = new Vector3 (hitNodes [i].transform.parent.position.x + (5 * xOffset), hitNodes [i].transform.parent.position.y, hitNodes [i].transform.parent.position.z + (5 * zOffset));
+
 			if (i == hitNodes.Length - 1) //On the tile farthest from the edge
 			{
 				mazeHandler.spareTileType = (MazeHandler.TileTypes) hitNodes [i].transform.GetComponent <TileNode> ().myTileType; //Hopefully this cast works
@@ -106,13 +119,7 @@ public class EdgeHandler : MonoBehaviour
 
 				hitNodes [i].transform.parent.position = sparePosition; //Move the last tile to the spare position
 
-			} else if (i == 0)
-			{
-				mazeHandler.spareTileNode.transform.parent.position = hitNodes [i].transform.parent.position; //Move the spare to the first spot
-
 			}
-
-			hitNodes [i].transform.parent.position = new Vector3 (hitNodes [i].transform.parent.position.x + (5 * xOffset), hitNodes [i].transform.parent.position.y, hitNodes [i].transform.parent.position.z + (5 * zOffset));
 
 		}
 
@@ -124,6 +131,8 @@ public class EdgeHandler : MonoBehaviour
 			node.CheckForNeighbors ();
 
 		}
+
+		Debug.Log ("Done.");
 		
 
 	}
