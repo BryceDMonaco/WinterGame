@@ -434,8 +434,9 @@ GameObject:
   m_Component:
   - component: {fileID: 165922671}
   - component: {fileID: 165922674}
-  - component: {fileID: 165922673}
   - component: {fileID: 165922672}
+  - component: {fileID: 165922673}
+  - component: {fileID: 165922675}
   m_Layer: 0
   m_Name: Arrow (1)
   m_TagString: Untagged
@@ -490,8 +491,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &165922673
-MeshCollider:
+--- !u!65 &165922673
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -499,11 +500,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &165922674
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -511,6 +510,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165922670}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &165922675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165922670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 1
 --- !u!1 &209982010
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,8 +636,9 @@ GameObject:
   m_Component:
   - component: {fileID: 280746238}
   - component: {fileID: 280746241}
-  - component: {fileID: 280746240}
   - component: {fileID: 280746239}
+  - component: {fileID: 280746240}
+  - component: {fileID: 280746242}
   m_Layer: 0
   m_Name: Arrow (6)
   m_TagString: Untagged
@@ -680,8 +693,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &280746240
-MeshCollider:
+--- !u!65 &280746240
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -689,11 +702,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.000000059604645}
 --- !u!33 &280746241
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -701,6 +712,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 280746237}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &280746242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 280746237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 2
 --- !u!1 &282278822
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,8 +734,9 @@ GameObject:
   m_Component:
   - component: {fileID: 282278823}
   - component: {fileID: 282278826}
-  - component: {fileID: 282278825}
   - component: {fileID: 282278824}
+  - component: {fileID: 282278825}
+  - component: {fileID: 282278827}
   m_Layer: 0
   m_Name: Arrow (3)
   m_TagString: Untagged
@@ -766,8 +791,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &282278825
-MeshCollider:
+--- !u!65 &282278825
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -775,11 +800,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &282278826
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -787,6 +810,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282278822}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &282278827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282278822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 3
 --- !u!1 &300887989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,8 +1457,9 @@ GameObject:
   m_Component:
   - component: {fileID: 551348760}
   - component: {fileID: 551348763}
-  - component: {fileID: 551348762}
   - component: {fileID: 551348761}
+  - component: {fileID: 551348762}
+  - component: {fileID: 551348764}
   m_Layer: 0
   m_Name: Arrow (9)
   m_TagString: Untagged
@@ -1477,8 +1514,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &551348762
-MeshCollider:
+--- !u!65 &551348762
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1486,11 +1523,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &551348763
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1498,6 +1533,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 551348759}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &551348764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 551348759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 0
 --- !u!1 &626142199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,8 +1845,9 @@ GameObject:
   m_Component:
   - component: {fileID: 635194882}
   - component: {fileID: 635194885}
-  - component: {fileID: 635194884}
   - component: {fileID: 635194883}
+  - component: {fileID: 635194884}
+  - component: {fileID: 635194886}
   m_Layer: 0
   m_Name: Arrow (10)
   m_TagString: Untagged
@@ -1853,8 +1902,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &635194884
-MeshCollider:
+--- !u!65 &635194884
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1862,11 +1911,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &635194885
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1874,6 +1921,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635194881}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &635194886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635194881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 0
 --- !u!1 &641021772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,8 +3674,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1175951629}
   - component: {fileID: 1175951632}
-  - component: {fileID: 1175951631}
   - component: {fileID: 1175951630}
+  - component: {fileID: 1175951631}
+  - component: {fileID: 1175951633}
   m_Layer: 0
   m_Name: Arrow (4)
   m_TagString: Untagged
@@ -3670,8 +3731,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1175951631
-MeshCollider:
+--- !u!65 &1175951631
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3679,11 +3740,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1175951632
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3691,6 +3750,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1175951628}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1175951633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1175951628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 3
 --- !u!1 &1241531573
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,8 +4084,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1321076215}
   - component: {fileID: 1321076218}
-  - component: {fileID: 1321076217}
   - component: {fileID: 1321076216}
+  - component: {fileID: 1321076217}
+  - component: {fileID: 1321076219}
   m_Layer: 0
   m_Name: Arrow (11)
   m_TagString: Untagged
@@ -4068,8 +4141,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1321076217
-MeshCollider:
+--- !u!65 &1321076217
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4077,11 +4150,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1321076218
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4089,6 +4160,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321076214}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1321076219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321076214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 0
 --- !u!1 &1351097901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,6 +4251,8 @@ MonoBehaviour:
   - {fileID: 2120678555}
   - {fileID: 633082346}
   spareHolder: {fileID: 1241531575}
+  spareTileNode: {fileID: 0}
+  spareTileType: 0
 --- !u!4 &1351097903
 Transform:
   m_ObjectHideFlags: 0
@@ -4397,8 +4483,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1473259585}
   - component: {fileID: 1473259588}
-  - component: {fileID: 1473259587}
   - component: {fileID: 1473259586}
+  - component: {fileID: 1473259587}
+  - component: {fileID: 1473259589}
   m_Layer: 0
   m_Name: Arrow (7)
   m_TagString: Untagged
@@ -4453,8 +4540,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1473259587
-MeshCollider:
+--- !u!65 &1473259587
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4462,11 +4549,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.000000059604645}
 --- !u!33 &1473259588
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4474,6 +4559,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1473259584}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1473259589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473259584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 2
 --- !u!1 &1475347631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,8 +4581,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1475347632}
   - component: {fileID: 1475347635}
-  - component: {fileID: 1475347634}
   - component: {fileID: 1475347633}
+  - component: {fileID: 1475347634}
+  - component: {fileID: 1475347636}
   m_Layer: 0
   m_Name: Arrow (5)
   m_TagString: Untagged
@@ -4539,8 +4638,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1475347634
-MeshCollider:
+--- !u!65 &1475347634
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4548,11 +4647,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000005, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1475347635
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4560,6 +4657,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475347631}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1475347636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475347631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 3
 --- !u!1 &1478818411
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,8 +5199,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1583441266}
   - component: {fileID: 1583441269}
-  - component: {fileID: 1583441268}
   - component: {fileID: 1583441267}
+  - component: {fileID: 1583441268}
+  - component: {fileID: 1583441270}
   m_Layer: 0
   m_Name: Arrow (2)
   m_TagString: Untagged
@@ -5145,8 +5256,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1583441268
-MeshCollider:
+--- !u!65 &1583441268
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5154,11 +5265,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1583441269
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5166,6 +5275,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1583441265}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1583441270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583441265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 1
 --- !u!1 &1621159391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5175,8 +5297,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1621159395}
   - component: {fileID: 1621159394}
-  - component: {fileID: 1621159393}
   - component: {fileID: 1621159392}
+  - component: {fileID: 1621159393}
+  - component: {fileID: 1621159396}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -5218,8 +5341,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1621159393
-MeshCollider:
+--- !u!65 &1621159393
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5227,11 +5350,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1621159394
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5252,6 +5373,19 @@ Transform:
   m_Father: {fileID: 1887911350}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 270, z: 0}
+--- !u!114 &1621159396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621159391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 1
 --- !u!1 &1676549599
 GameObject:
   m_ObjectHideFlags: 0
@@ -5573,8 +5707,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1769935149}
   - component: {fileID: 1769935152}
-  - component: {fileID: 1769935151}
   - component: {fileID: 1769935150}
+  - component: {fileID: 1769935151}
+  - component: {fileID: 1769935153}
   m_Layer: 0
   m_Name: Arrow (8)
   m_TagString: Untagged
@@ -5629,8 +5764,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &1769935151
-MeshCollider:
+--- !u!65 &1769935151
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5638,11 +5773,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 0.1}
+  m_Center: {x: 0, y: 0, z: -0.000000059604645}
 --- !u!33 &1769935152
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5650,6 +5783,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1769935148}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1769935153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769935148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc103e324b984e2aa0bd5c97820cac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeHandler: {fileID: 1351097902}
+  thisEdgeDirection: 2
 --- !u!1 &1771673607
 GameObject:
   m_ObjectHideFlags: 0

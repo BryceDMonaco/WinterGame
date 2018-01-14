@@ -13,6 +13,10 @@ public class MazeHandler : MonoBehaviour
 {
 	public TileHolder[] tileHolders;
 	public TileHolder spareHolder;
+	public TileNode spareTileNode;
+	
+	public enum TileTypes {Nonstatic, Corner, Straight, TShape};
+	public TileTypes spareTileType = TileTypes.Nonstatic;
 	
 
 	void Start () 
@@ -75,15 +79,27 @@ public class MazeHandler : MonoBehaviour
 
 		if (tileCountCorner == 1)
 		{
-			Instantiate (spareHolder.tileCorner, spareHolder.transform.position, spareHolder.transform.rotation);
+			GameObject spare = Instantiate (spareHolder.tileCorner, spareHolder.transform.position, spareHolder.transform.rotation);
+
+			spareTileType = TileTypes.Corner;
+
+			spareTileNode = spare.GetComponentInChildren <TileNode> ();
 
 		} else if (tileCountStraight == 1)
 		{
-			Instantiate (spareHolder.tileStraight, spareHolder.transform.position, spareHolder.transform.rotation);
+			GameObject spare = Instantiate (spareHolder.tileStraight, spareHolder.transform.position, spareHolder.transform.rotation);
+
+			spareTileType = TileTypes.Straight;
+
+			spareTileNode = spare.GetComponentInChildren <TileNode> ();
 
 		} else if (tileCountTShape == 1)
 		{
-			Instantiate (spareHolder.tileTShape, spareHolder.transform.position, spareHolder.transform.rotation);
+			GameObject spare = Instantiate (spareHolder.tileTShape, spareHolder.transform.position, spareHolder.transform.rotation);
+
+			spareTileType = TileTypes.TShape;
+
+			spareTileNode = spare.GetComponentInChildren <TileNode> ();
 
 		}
 	}

@@ -197,6 +197,7 @@
      <Compile Include="Assets\Asset Store\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Asset Store\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\Asset Store\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\EdgeHandler.cs" />
      <Compile Include="Assets\Scripts\MazeHandler.cs" />
      <Compile Include="Assets\Scripts\PathFinding.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
