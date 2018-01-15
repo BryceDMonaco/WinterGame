@@ -22,6 +22,7 @@ public class EdgeHandler : MonoBehaviour
 	public EdgeDirections thisEdgeDirection = EdgeDirections.Unassigned;
 
 	private Color startColor;
+	private bool areTilesShifting = false;
 
 	void Start () 
 	{
@@ -55,8 +56,10 @@ public class EdgeHandler : MonoBehaviour
 
 	public void OnMouseOver ()
 	{
-		if (Input.GetMouseButtonDown (0))
-		{
+		if (!areTilesShifting && Input.GetMouseButtonDown (0))
+		{	
+			//areTilesShifting = true;
+
 			ShiftTiles ();
 
 		}
@@ -72,6 +75,12 @@ public class EdgeHandler : MonoBehaviour
 		hitNodes = Physics.RaycastAll (transform.position, transform.up, 50f, LayerMask.GetMask ("MazeNode"));
 
 		Debug.Log (transform.name + " hit " + hitNodes.Length + "Nodes.");
+
+		for (int i = 0; i < hitNodes.Length; i++)
+		{
+			hitNodes [i].transform.parent.name = i.ToString ();
+
+		}
 
 		//Debug.DrawLine (transform.position, hitNodes [hitNodes.Length - 1].transform.position, Color.red, 5f);
 
@@ -102,17 +111,13 @@ public class EdgeHandler : MonoBehaviour
 		Vector3 sparePosition = mazeHandler.spareHolder.transform.position;
 		Vector3 startPostion = hitNodes [0].transform.parent.position;
 
+		mazeHandler.spareTileNode.transform.parent.position = startPostion; //Move the spare to the first spot
+
 		for (int i = 0; i < hitNodes.Length; i++)
 		{
-			if (i == 0)
-			{
-				mazeHandler.spareTileNode.transform.parent.position = startPostion; //Move the spare to the first spot
-
-			}
-
 			hitNodes [i].transform.parent.position = new Vector3 (hitNodes [i].transform.parent.position.x + (5 * xOffset), hitNodes [i].transform.parent.position.y, hitNodes [i].transform.parent.position.z + (5 * zOffset));
 
-			if (i == hitNodes.Length - 1) //On the tile farthest from the edge
+			if (i == (hitNodes.Length - 1)) //On the tile farthest from the edge
 			{
 				mazeHandler.spareTileType = (MazeHandler.TileTypes) hitNodes [i].transform.GetComponent <TileNode> ().myTileType; //Hopefully this cast works
 				mazeHandler.spareTileNode = hitNodes [i].transform.GetComponent <TileNode> ();
@@ -133,7 +138,6 @@ public class EdgeHandler : MonoBehaviour
 		}
 
 		Debug.Log ("Done.");
-		
 
 	}
 }

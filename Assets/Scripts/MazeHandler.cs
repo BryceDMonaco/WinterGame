@@ -71,6 +71,7 @@ public class MazeHandler : MonoBehaviour
 					if (spawnedTile != null)
 					{
 						spawnedTile.transform.rotation = Quaternion.Euler (0f, 90 * (int) Random.Range(0, 5), 0f);
+						
 
 					}
 				}
