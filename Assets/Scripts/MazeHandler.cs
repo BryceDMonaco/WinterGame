@@ -14,6 +14,8 @@ public class MazeHandler : MonoBehaviour
 	public TileHolder[] tileHolders;
 	public TileHolder spareHolder;
 	public TileNode spareTileNode;
+	public EdgeHandler[] arrows;
+	public TileNode[] allTileNodes;
 	
 	public enum TileTypes {Nonstatic, Corner, Straight, TShape};
 	public TileTypes spareTileType = TileTypes.Nonstatic;
@@ -71,9 +73,12 @@ public class MazeHandler : MonoBehaviour
 					if (spawnedTile != null)
 					{
 						spawnedTile.transform.rotation = Quaternion.Euler (0f, 90 * (int) Random.Range(0, 5), 0f);
-						
+						spawnedTile.name = spawnedTile.name + "-" + GetRandomLetterString(4); 
 
 					}
+
+					
+
 				}
 			} 
 		}
@@ -103,6 +108,46 @@ public class MazeHandler : MonoBehaviour
 			spareTileNode = spare.GetComponentInChildren <TileNode> ();
 
 		}
+
+		UpdateAllNodesArrays ();
+
+	}
+
+	string GetRandomLetterString (int length)
+	{
+		string rand = "";
+
+		for (int i = 0; i < length; i++)
+		{
+			rand += (char) (Random.Range(65, 91) + (Random.Range (0, 2) * 32));
+
+		}
+
+		return rand;
+
+	}
+
+	public void UpdateAllNodesArrays ()
+	{
+		foreach (EdgeHandler arrow in arrows)
+		{
+			arrow.GenerateNodesArray ();
+
+		}
+
+	}
+
+	public void UpdateAllNodeNeighbors ()
+	{
+		allTileNodes = FindObjectsOfType <TileNode> ();
+
+		foreach (TileNode node in allTileNodes)
+		{
+			node.ClearNeighbors ();
+			node.CheckForNeighbors ();
+
+		}
+
 	}
 	
 	void Update () 
