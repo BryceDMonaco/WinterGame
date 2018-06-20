@@ -201,6 +201,7 @@
      <Compile Include="Assets\Scripts\MazeHandler.cs" />
      <Compile Include="Assets\Scripts\PathFinding.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PreviewTile.cs" />
      <Compile Include="Assets\Scripts\TileHolder.cs" />
      <Compile Include="Assets\Scripts\TileNode.cs" />
      <None Include="Assets\Asset Store\PostProcessing\Resources\Shaders\DepthOfField.shader" />
