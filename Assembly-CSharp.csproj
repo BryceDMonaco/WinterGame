@@ -162,6 +162,13 @@
     <Compile Include="Assets\Asset Store\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\RandomPlacementFunction.cs" />
     <Compile Include="Assets\Asset Store\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SineWavePlacementFunction.cs" />
     <Compile Include="Assets\Asset Store\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SpirographPlacementFunction.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\EdgeHandler.cs" />
     <Compile Include="Assets\Scripts\MazeHandler.cs" />
     <Compile Include="Assets\Scripts\PathFinding.cs" />
@@ -175,6 +182,7 @@
     <None Include="Assets\Asset Store\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
     <None Include="Assets\Asset Store\Plugins\Sirenix\Readme.txt" />
     <None Include="Assets\Asset Store\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\Asset Store\Plugins\Sirenix\Assemblies\link.xml" />
     <None Include="Assets\Asset Store\PigeonCoopToolkit\__SharedDemoAssets\Sword\sword License.txt" />
     <None Include="Assets\Asset Store\StoneWalls\readme.txt" />
@@ -423,6 +431,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>H:/Documents/Unity Projects/WinterGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>H:/Documents/Unity Projects/WinterGame/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
