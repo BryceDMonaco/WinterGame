@@ -16,8 +16,6 @@ public class MazeHandler : MonoBehaviour
 	public TileNode spareTileNode;
 	public EdgeHandler[] arrows;
 	public TileNode[] allTileNodes;
-
-	public PreviewTile previewTile;
 	
 	public enum TileTypes {Nonstatic, Corner, Straight, TShape};
 	public TileTypes spareTileType = TileTypes.Nonstatic;

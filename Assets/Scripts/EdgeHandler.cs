@@ -25,12 +25,13 @@ public class EdgeHandler : MonoBehaviour
 
 	private Color startColor;
 	private bool areTilesShifting = false;
-	public Transform startTransform;
-	public Transform previewTransform;
+	private Transform startTransform;
 	public Transform[] nodes;
 
 	void Start () 
 	{
+		startTransform = transform.GetChild(0);
+		//nodes = new Transform[7];
 		
 	}
 	
@@ -56,19 +57,11 @@ public class EdgeHandler : MonoBehaviour
 
 		myRenderer.material.color = startColor;
 
-		mazeHandler.previewTile.HidePreview ();
-
 
 	}
 
 	public void OnMouseOver ()
 	{
-		if (!areTilesShifting)
-		{
-			mazeHandler.previewTile.MoveToPosition (previewTransform);
-
-		}
-
 		if (!areTilesShifting && Input.GetMouseButtonDown (0))
 		{	
 			//areTilesShifting = true;
@@ -248,8 +241,6 @@ public class EdgeHandler : MonoBehaviour
 			nodes [i].position = new Vector3 (startPosition.x + (5 * xOffset * i), startPosition.y, startPosition.z + (5 * zOffset * i));
 
 		}
-
-		nodes [0].rotation = mazeHandler.previewTile.transform.rotation;
 
 		//Have all nodes regenerate their paths
 		mazeHandler.UpdateAllNodeNeighbors ();
