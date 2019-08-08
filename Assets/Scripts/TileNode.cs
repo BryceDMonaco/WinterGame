@@ -14,7 +14,10 @@ public class TileNode : MonoBehaviour
 	public TileNode[] neighbors = new TileNode [3]; //Each tile will have 0 to 3 neighbors depending on the type and orientation 
 	
 	public enum TileTypes {Nonstatic, Corner, Straight, TShape};
-	public TileTypes myTileType = TileTypes.Nonstatic; 
+	public TileTypes myTileType = TileTypes.Nonstatic;
+
+    [HideInInspector]
+    public List<TileNode> history;  // Only used by PathFinding to generate best path
 
 	void Start () 
 	{

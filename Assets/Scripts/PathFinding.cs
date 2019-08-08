@@ -12,7 +12,10 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
-	public bool DoesAnyPathExist (TileNode start, TileNode end) 
+    /**
+     * Returns a list if a path exists, null otherwise
+     */
+    public List<TileNode> DoesAnyPathExist (TileNode start, TileNode end) 
 	{ 
 
 		Stack<TileNode> work = new Stack<TileNode> ();
@@ -20,16 +23,19 @@ public class PathFinding : MonoBehaviour
 
 		work.Push (start);
 		visited.Add (start);
-		//start.history = new List<TileNode> ();
+		start.history = new List<TileNode> ();
 
 		while(work.Count > 0)
 		{
 			TileNode current = work.Pop ();
 			if (current == end) 
 			{
-				//List<TileNode> result = current.history;
-				//result.Add (current);
-				return true;
+			    List<TileNode> result = current.history;
+				result.Add (current);
+
+				return result;
+
+
 
 			} else 
 			{
@@ -41,14 +47,14 @@ public class PathFinding : MonoBehaviour
 
 						work.Push (currentChild);
 						visited.Add (currentChild);
-						//currentChild.history = new List<TileNode> (current.history);
-						//currentChild.history.Add (current);
+						currentChild.history = new List<TileNode> (current.history);
+						currentChild.history.Add (current);
 					}
 				}	
 			}
 		}
 
-		return false; 
+		return null; 
 	
 	}
 }
