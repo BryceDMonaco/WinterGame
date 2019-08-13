@@ -14,6 +14,7 @@ public class MazeHandler : MonoBehaviour
 	public TileHolder[] tileHolders;
 	public TileHolder spareHolder;
 	public TileNode spareTileNode;
+    public TileNode previewTileNode;
 	public EdgeHandler[] arrows;
 	public TileNode[] allTileNodes;
 	

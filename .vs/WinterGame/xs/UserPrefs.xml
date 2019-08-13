@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{D1800BB4-C760-9125-B657-3B591839070B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EdgeHandler.cs">
+    <Files>
+      <File FileName="Assets/Scripts/EdgeHandler.cs" Line="132" Column="89" />
+      <File FileName="Assets/Scripts/MazeHandler.cs" Line="15" Column="15" />
+      <File FileName="Assets/Scripts/TileHolder.cs" Line="12" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
