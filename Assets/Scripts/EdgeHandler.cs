@@ -48,12 +48,21 @@ public class EdgeHandler : MonoBehaviour
 
 		myRenderer.material.color = Color.red;
 
+        UpdatePreviewTile();
 
-	}
+
+    }
 
 	public void OnMouseExit ()
 	{
-		MeshRenderer myRenderer = GetComponent <MeshRenderer> ();
+        if (mazeHandler.previewTileNode != null)
+        {
+            Destroy(mazeHandler.previewTileNode.transform.parent.gameObject);
+        }
+
+        mazeHandler.previewTileNode = null;
+
+        MeshRenderer myRenderer = GetComponent <MeshRenderer> ();
 
 		myRenderer.material.color = startColor;
 
@@ -67,12 +76,66 @@ public class EdgeHandler : MonoBehaviour
 			//areTilesShifting = true;
 
 			ShiftTilesV2 ();
+            UpdatePreviewTile ();
 
 		}
 
 	}
 
-	public void GenerateNodesArray ()
+    public void UpdatePreviewTile ()
+    {
+        if (mazeHandler.previewTileNode != null)
+        {
+            Destroy(mazeHandler.previewTileNode.transform.parent.gameObject);
+        }
+
+        mazeHandler.previewTileNode = null;
+
+        GameObject preview = null;
+
+        switch ((TileTypes)mazeHandler.spareTileType)
+        {
+            case TileTypes.Corner:
+                preview = Instantiate(mazeHandler.spareHolder.tileCorner, new Vector3(1000, 0, 1000), Quaternion.identity);
+                break;
+            case TileTypes.Straight:
+                preview = Instantiate(mazeHandler.spareHolder.tileStraight, new Vector3(1000, 0, 1000), Quaternion.identity);
+                break;
+            case TileTypes.TShape:
+                preview = Instantiate(mazeHandler.spareHolder.tileTShape, new Vector3(1000, 0, 1000), Quaternion.identity);
+                break;
+        }
+
+        foreach (Transform part in preview.gameObject.GetComponentsInChildren<Transform>())
+        {
+            part.gameObject.layer = 2;
+        }
+
+        preview.name = "Preview Tile";
+
+        switch (thisEdgeDirection)
+        {
+            case EdgeDirections.NegX:
+                preview.transform.position = new Vector3(20, 0.5f, transform.position.z);
+                break;
+            case EdgeDirections.PosX:
+                preview.transform.position = new Vector3(-20, 0.5f, transform.position.z);
+                break;
+            case EdgeDirections.NegZ:
+                preview.transform.position = new Vector3(transform.position.x, 0.5f, 20);
+                break;
+            case EdgeDirections.PosZ:
+                preview.transform.position = new Vector3(transform.position.x, 0.5f, -20);
+                break;
+        }
+
+        preview.transform.rotation = mazeHandler.spareTileNode.transform.parent.rotation;
+
+        mazeHandler.previewTileNode = preview.GetComponentInChildren<TileNode>();
+
+    }
+
+    public void GenerateNodesArray ()
 	{
 		nodes = new Transform[7];
 
