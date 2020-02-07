@@ -259,8 +259,8 @@ public class EdgeHandler : MonoBehaviour
 		//Set spareTileNode to the tile which will be pushed out
 		mazeHandler.spareTileNode = nodes[6].GetComponentInChildren<TileNode>();
 
-		//Move the tiles up the array (so nodes[6] becomes nodes[5], 5 becomes 4, all the way to 1 becomes 0)
-		for (int i = 6; i > 0; i--)
+        //Move the tiles up the array (so nodes[6] becomes nodes[5], 5 becomes 4, all the way to 1 becomes 0)
+        for (int i = 6; i > 0; i--)
 		{
 			nodes[i] = nodes [i - 1];	
 
@@ -275,8 +275,18 @@ public class EdgeHandler : MonoBehaviour
 
 		Vector3 startPosition = startTransform.position;
 
-		//Used to determine how the tiles should be offset, only one value should be non-zero and will be +/- 1.
-		int xOffset = 0;
+        // If the tile which will be pushed out has a player on it, move the player to the opposite end
+        PlayerController player;
+        if (player = mazeHandler.spareTileNode.transform.GetComponentInChildren<PlayerController>())
+        {
+            player.transform.parent = null;  // Clear the old parent
+            player.currentNode = nodes[0].GetComponentInChildren<TileNode>();  // Set the new tile as the current node
+            player.transform.position = player.currentNode.transform.position;  // Move the player to the new tile
+            player.transform.parent = player.currentNode.transform;  // Set the new tile as the parent
+        }
+
+        //Used to determine how the tiles should be offset, only one value should be non-zero and will be +/- 1.
+        int xOffset = 0;
 		int zOffset = 0;
 
 		//This was taken out of the loop to speed it up a little bit

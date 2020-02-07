@@ -23,9 +23,11 @@ public class PlayerController : MonoBehaviour
 	{
 		pathFinder = GetComponent <PathFinding> ();
 
-		//currentNode = startNode;
+        //currentNode = startNode;
 
-		//transform.position = currentNode.transform.position;
+        //transform.position = currentNode.transform.position;
+
+        transform.parent = currentNode.transform;
 		
 	}
 	
@@ -43,11 +45,14 @@ public class PlayerController : MonoBehaviour
 
 				if ((path = pathFinder.DoesAnyPathExist (currentNode, hitNode)) != null)
 				{
+                    transform.parent = null;
+
                     MoveAlongPath(path);
 
                     Debug.Log("Path is " + path.Count + " tiles long.");
                     //transform.position = hitNode.transform.position;
 					currentNode = hitNode;
+                    transform.parent = currentNode.transform;
 
 				} else 
 				{
